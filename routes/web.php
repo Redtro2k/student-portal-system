@@ -32,4 +32,9 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+    Route::group(['role:admin'], function(){
+        Route::resource('admin', \App\Http\Controllers\AdminController::class);
+        Route::resource('teachers', \App\Http\Controllers\TeacherController::class);
+        Route::resource('course', \App\Http\Controllers\CourseController::class);
+    });
 });
