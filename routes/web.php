@@ -37,5 +37,7 @@ Route::middleware([
         Route::resource('admin', \App\Http\Controllers\AdminController::class);
         Route::resource('teachers', \App\Http\Controllers\TeacherController::class);
         Route::resource('course', \App\Http\Controllers\CourseController::class);
+        Route::resource('school', \App\Http\Controllers\SchoolController::class);
+        Route::resource('subject', \App\Http\Controllers\SubjectController::class);
     });
 });

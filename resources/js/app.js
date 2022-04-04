@@ -5,6 +5,8 @@ import { createInertiaApp } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
 import "vue-select/dist/vue-select.css";
 import vSelect from "vue-select";
+import Datepicker from "@vuepic/vue-datepicker";
+import "@vuepic/vue-datepicker/dist/main.css";
 
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
@@ -17,6 +19,7 @@ createInertiaApp({
             .use(plugin)
             .mixin({ methods: { route } })
             .component("v-select", vSelect)
+            .component("DatePicker", Datepicker)
             .mount(el);
     },
 });
