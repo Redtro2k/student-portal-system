@@ -30,7 +30,7 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        auth()->user()->assignRole('admin');
+//        auth()->user()->assignRole('admin');
         return Inertia::render('Dashboard');
     })->name('dashboard');
     Route::group(['role:admin'], function(){
