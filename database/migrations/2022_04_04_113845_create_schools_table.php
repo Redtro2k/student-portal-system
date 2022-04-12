@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('schools', function (Blueprint $table) {
             $table->id();
-            $table->text('school_id');
-            $table->string('school_name');
-            $table->string('location');
-            $table->string('address');
-            $table->json('telephone');
-            $table->json('schedule_time')->nullable();
-            $table->json('social_media')->nullable();
-            $table->text('about');
+            $table->text('school_id')->nullable();
+            $table->string('school_name')->nullable();
+            $table->string('location')->nullable();
+            $table->string('address')->nullable();
+            $table->json('telephone')->nullable();
+            $table->json('schedules')->nullable();
+            $table->json('social')->nullable();
+            $table->text('about')->nullable();
             $table->timestamps();
         });
     }

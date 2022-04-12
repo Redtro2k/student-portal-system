@@ -10,6 +10,7 @@
             required
         ></textarea>
         </div>
+        <p class="text-red-400 text-sm pb-2" v-if="error">{{error}}</p>
     </div>
 </template>
 <script>
@@ -19,7 +20,8 @@ export default {
     props: {
         title: String,
         name: String,
-        size: String
+        size: String,
+        error: String
     },
     components: {
         FormLabel

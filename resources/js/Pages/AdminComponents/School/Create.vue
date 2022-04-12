@@ -18,27 +18,32 @@
                         v-model:title="form.school_name"
                         label-title="Create a School Name"
                         small-description="please create a school name and be sure its good or interactive and formalize name"
+                        :error="$page.props.errors.schoo_name"
                     />
                     <form-input
                         v-model:title="form.location"
                         label-title="Location"
                         description="Manila, Quezon City"
                         small-description="please fill up the specific location, Sorry for manual fill up we're still developing maps API"
+                        :error="$page.props.errors.location"
                     />
                     <form-input
                         v-model:title="form.address"
                         label-title="Street Address"
                         description="Gen. Villamor St. "
                         small-description="please fill up the specific Address or live with a full adress, Sorry for manual fill up we're still developing maps API"
+                        :error="$page.props.errors.address"
                     />
                     <div class="col-span-6 px-2 sm:col-span-3">
                         <label-form title="Phone Number" />
                         <vue-tel-input v-model="form.telephone"></vue-tel-input>
+                        <p class="text-red-400 text-sm pb-2" v-if="$page.props.errors.telephone">{{$page.props.errors.telephone}}</p>
                     </div>
                     <form-text-area
                         size="4"
                         name="About/Brief School"
                         v-model:title="form.about"
+                        :error="$page.props.errors.about"
                     />
                     <div class="col-span-6 px-2 sm:col-span-3">
                         <form-toggle
@@ -103,9 +108,10 @@
                                             class="block w-full border-0 border-b border-transparent bg-gray-50 focus:border-indigo-600 focus:ring-0 sm:text-sm"
                                             placeholder="Enter URL Mail"
                                         />
+                                        <p>{{$page.props.errors.email}}</p>
                                     </div>
                                 </div>
-                   
+
                                 <div class="flex-auto w-32 pt-1">
                                     <form-button
                                         text="Delete"
@@ -114,12 +120,11 @@
                                     />
                                 </div>
                             </div>
-       
+
                             <button
                                 :disabled="checking(increment.count)"
                                 @click="newMedia"
                                 class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                :enabled="processing"
                                 >
                                 Add more
                                 </button>
@@ -128,7 +133,7 @@
                 </template>
                 <template #footer>
                     <form-button is-submit text="Reset" />
-                    <form-button is-submit="submit" text="Create" />
+                    <form-button is-submit="submit" text="Create" :enabled="processing"/>
                 </template>
             </form-container>
         </form>
@@ -137,7 +142,6 @@
 <script setup>
 import AdminLayout from "@/Layouts/AdminLayout";
 import FormButton from "@/Shared/Form/Button";
-// import FormContainer from "@/Shared/Form/Container";
 import FormHeader from "@/Shared/Form/FormHeader";
 import FormInput from "@/Shared/Form/Input";
 import FormLabel from "@/Shared/Form/Label";
@@ -147,9 +151,9 @@ import FormTextArea from "@/Shared/Form/InputTextArea";
 import FormToggle from "@/Shared/Form/ToggleWithDescription";
 import { VueTelInput } from "vue-tel-input";
 import "vue-tel-input/dist/vue-tel-input.css";
+import {useForm} from "@inertiajs/inertia-vue3";
 
 import { defineAsyncComponent, reactive, ref } from "vue";
-import { Inertia } from "@inertiajs/inertia";
 
 let FormContainer = defineAsyncComponent({
     loader: () => import('@/Shared/Form/Container'),
@@ -173,7 +177,7 @@ function removeMedia(index){
 }
 
 const checking = ((index) => {
-    return form.social[index].email ? false : true
+    return !form.social[index].email
 })
 
 const props = defineProps({
@@ -192,7 +196,9 @@ const months = [
     "Sunday",
 ];
 
-const form = reactive({
+let processing = ref(false)
+
+const form = useForm({
     school_id: props.SchoolID,
     school_name: "",
     location: "",
@@ -304,16 +310,12 @@ const form = reactive({
         },
     ],
     about: "",
-    telephone: null,
+    telephone: "",
     social: [{ email: "" }],
 });
 
-let processing = ref(false)
-
-const submit = () => {
-    Inertia.post('/school', form, {
-        onStart: () => {processing.value = true},
-        onFinish: () => {processing.value = false}
-    })
+let submit = () => {
+   form.post('/school')
 }
+
 </script>

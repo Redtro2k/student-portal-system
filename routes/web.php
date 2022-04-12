@@ -30,14 +30,20 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-//        auth()->user()->assignRole('admin');
         return Inertia::render('Dashboard');
     })->name('dashboard');
-    Route::group(['role:admin'], function(){
+    Route::middleware(['role:admin'])->group(function(){
         Route::resource('admin', \App\Http\Controllers\AdminController::class);
         Route::resource('teachers', \App\Http\Controllers\TeacherController::class);
         Route::resource('course', \App\Http\Controllers\CourseController::class);
-        Route::resource('school', \App\Http\Controllers\SchoolController::class);
+        Route::controller(\App\Http\Controllers\SchoolController::class)->group(function(){
+            Route::get('school', 'index');
+            Route::get('/school/create', 'create');
+            Route::post('/school', 'store');
+            Route::post('/school/delete/{id}', 'destroy');
+            Route::get('/school/{id}/edit', 'edit');
+            Route::post('/school/update/{token}', 'update');
+        });
         Route::resource('subject', \App\Http\Controllers\SubjectController::class);
     });
 });

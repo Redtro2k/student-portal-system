@@ -464,7 +464,8 @@ __webpack_require__.r(__webpack_exports__);
       "default": function _default() {
         return null;
       }
-    }
+    },
+    error: String
   },
   emits: ['update:title'],
   components: {
@@ -1150,6 +1151,10 @@ var _hoisted_1 = {
   "class": "col-span-6 px-2 sm:col-span-3"
 };
 var _hoisted_2 = ["type", "placeholder", "value"];
+var _hoisted_3 = {
+  key: 0,
+  "class": "text-red-400 text-sm pb-2"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_label_form = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("label-form");
 
@@ -1172,7 +1177,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "text-sm text-gray-400 leading-normal"
   }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.smallDescription), 513
   /* TEXT, NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $props.smallDescription != null]])]);
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $props.smallDescription != null]]), $props.error ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.error), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
 }
 
 /***/ }),

@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class School extends Model
 {
     use HasFactory;
+    protected $guarded = [];
     protected $casts = [
-        'social_media' => 'json',
-        'schedule_time' => 'json'
+        'schedules' => 'array',
+        'social' => 'array'
     ];
 }

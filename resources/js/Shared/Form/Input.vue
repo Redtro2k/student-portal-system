@@ -9,6 +9,7 @@
             @input="$emit('update:title', $event.target.value)" required
         />
         <p class="text-sm text-gray-400 leading-normal" v-show="smallDescription != null">{{ smallDescription }}</p>
+        <p class="text-red-400 text-sm pb-2" v-if="error">{{error}}</p>
     </div>
 </template>
 <script>
@@ -26,7 +27,8 @@ export default {
         },
         smallDescription: {
             default: () => null
-        }
+        },
+        error: String
     },
     emits: ['update:title'],
     components: {

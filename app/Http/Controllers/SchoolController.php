@@ -26,8 +26,8 @@ class SchoolController extends Controller
                 'location' => $school->location,
                 'address' => $school->address,
                 'phone' => $school->telephone,
-                'schedule' => $school->schedule_time,
-                'social' => $school->social_media,
+                'schedules' => $school->schedules,
+                'social' => $school->social,
                 'about' => $school->about
             ])
         ]);
@@ -48,46 +48,71 @@ class SchoolController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return Response
+     * @param Request $request
      */
     public function store(Request $request)
     {
-        //
-    }
+        $arributes = $request->validate([
+           'school_id' => 'required',
+           'school_name' => 'required',
+           'about' => 'required',
+           'address' => 'required',
+           'schedules' => 'required',
+           'social' => 'required',
+           'telephone' => 'required',
+           'location' => 'required'
+       ]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
+        School::create($arributes);
+        return redirect('school')->with('success', 'successfully created school');
     }
-
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return Response
+     * @return \Inertia\Response
      */
     public function edit($id)
     {
         //
+
+        return Inertia::render("AdminComponents/School/Update", [
+            'records' => School::all()->where('school_id', $id)->map(fn($schools) => [
+                'school_id' => $schools->school_id,
+                'school_name' => $schools->school_name,
+                'location' => $schools->location,
+                'address' => $schools->address,
+                'telephone' => $schools->telephone,
+                'about' => $schools->about
+            ])
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return Response
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $token): \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
     {
-        //
+        $this->validate($request, [
+            'school_name' => 'required',
+            'about' => 'required',
+            'address' => 'required',
+            'telephone' => 'required',
+            'location' => 'required'
+        ]);
+        School::updateOrCreate([
+            'school_id' => $token
+        ], [
+            'school_name' => $request->school_name,
+            'about' => $request->about,
+            'address' => $request->address,
+            'telephone' => $request->telephone,
+            'location' => $request->location,
+        ]);
+        return redirect('/school')->with('success', 'successfully update to our School');
     }
 
     /**
@@ -99,5 +124,6 @@ class SchoolController extends Controller
     public function destroy($id)
     {
         //
+        return dd($id);
     }
 }

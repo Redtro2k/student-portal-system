@@ -1,9 +1,14 @@
 <template>
+    <teleport to="body">
+        <form-modal :open="$page.props.modal.dialog" @close="$page.props.modal.dialog = false"/>
+    </teleport>
     <admin-layout title="School" isActive="school">
         <template #header>
-            <h1 class="text-2xl font-sans font-semibold text-gray-900">School</h1>
         </template>
-        <div v-if="records.count != null">
+        <div>
+            <header-banner v-show="$page.props.flash.success != null" :message="$page.props.flash.success"/>
+        </div>
+        <div v-if="records.length">
             <banner>
                 <template #header>
                     Last in 30 days
@@ -18,10 +23,14 @@
                 title="School Information"
                 sub-title="School details and application."
                 :items="records" class="mt-4">
-                <template #footer>
-                    <link-button links="#" text="Update"/>
+                <template v-for="record in records" :key="record" #footer>
+                    <link-button :links="linkEdit(record.id)" text="Update"/>
                 </template>
             </form-description>
+            <button @click="$page.props.modal.dialog = true">
+                <PencilIcon> </PencilIcon>
+                Edit Schedule</button>
+            <button @click="$page.props.modal.dialog = true">Edit Schedule</button>
         </div>
         <div v-else>
             <landing-section
@@ -33,23 +42,35 @@
             />
             <faq-section :items="faqs"/>
         </div>
-
-
     </admin-layout>
 </template>
 <script setup>
+import FormModal from "@/Shared/Modal/ModalForms"
 import AdminLayout from "@/Layouts/AdminLayout"
-import FormDescription from "@/Shared/Form/DescriptionList"
+import LoadingComponents from "../../LoadingComponents";
 import LinkButton from "@/Shared/Form/LinkButton";
 import StatsBanner from '@/Shared/Stats/StatsBanner'
 import Banner from "@/Shared/Stats/Banner";
 import LandingSection from "@/Shared/Sections/CTA/LandingSection"
 import FaqSection from "@/Shared/Sections/CTA/FaqSection"
+import HeaderBanner from "@/Shared/Banner/HeaderBanner"
+import {defineAsyncComponent, ref} from "vue";
+import { PencilIcon } from "@heroicons/vue/outline"
 
+const FormDescription = defineAsyncComponent({
+    loader:() => import("@/Shared/Form/DescriptionList"),
+    loadingComponent: LoadingComponents,
+    delay: 200,
+    errorComponent: 'somethings wrong...',
+    timeout: 3000
+})
 
 const props = defineProps({
-    records: Object
+    records: Object,
 })
+const linkEdit = (link) => {
+    return `/school/${link}/edit`
+}
 
 const faqs = [
     {
