@@ -37,14 +37,17 @@ Route::middleware([
         Route::resource('admin', \App\Http\Controllers\AdminController::class);
         Route::resource('teachers', \App\Http\Controllers\TeacherController::class);
         Route::resource('course', \App\Http\Controllers\CourseController::class);
-        Route::controller(\App\Http\Controllers\SchoolController::class)->group(function(){
-            Route::get('school', 'index');
-            Route::get('/school/create', 'create');
-            Route::post('/school', 'store');
-            Route::post('/school/delete/{id}', 'destroy');
-            Route::get('/school/{id}/edit', 'edit');
-            Route::post('/school/update/{token}', 'update');
-        });
+            Route::controller(\App\Http\Controllers\SchoolController::class)->group(function(){
+                Route::get('school', 'index');
+                Route::get('/school/create', 'create');
+                Route::post('/school', 'store');
+                Route::get('/school/delete/{id}', 'destroy');
+                Route::get('/school/{id}/edit', 'edit');
+                Route::post('/school/update/{token}', 'update');
+            });
+            Route::controller(App\Http\Controllers\Shared\ScheduleController::class)->group(function(){
+                Route::get('schedules/{id}/edit', 'edit');
+            });
         Route::resource('subject', \App\Http\Controllers\SubjectController::class);
     });
 });

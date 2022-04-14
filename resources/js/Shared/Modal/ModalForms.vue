@@ -13,19 +13,17 @@
                     <div class="relative inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
                         <div>
                             <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
-                                <CheckIcon class="h-6 w-6 text-green-600" aria-hidden="true" />
+                                <slot name="header"></slot>
                             </div>
                             <div class="mt-3 text-center sm:mt-5">
-                                <DialogTitle as="h3" class="text-lg leading-6 font-medium text-gray-900"> Payment successful </DialogTitle>
+                                <DialogTitle as="h3" class="text-lg leading-6 font-medium text-gray-900">{{titleModal}}</DialogTitle>
                                 <div class="mt-2">
-                                    <p class="text-sm text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius aliquam laudantium explicabo pariatur iste dolorem animi vitae error totam. At sapiente aliquam accusamus facere veritatis.</p>
+                                    <slot name="container"/>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
-                            <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm" @click="open = false">Deactivate</button>
-
-                            <modal-button type-button="isCancel" @click="$emit('close')"/>
+                            <modal-button type-button="isCancel" text="Cancel" @click="$emit('close')"/>
                         </div>
                     </div>
                 </TransitionChild>
@@ -35,13 +33,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import ModalButton from '@/Shared/Modal/ModalButton'
 import { Dialog, DialogOverlay, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { CheckIcon } from '@heroicons/vue/outline'
-import Modal from "../../Jetstream/Modal";
 
 defineProps({
-    open: Boolean
+    open: Boolean,
+    titleModal: String
 })
 </script>

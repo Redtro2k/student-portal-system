@@ -45,9 +45,10 @@
                         v-model:title="form.about"
                         :error="$page.props.errors.about"
                     />
+
                 </template>
                 <template #footer>
-                    <form-button is-submit text="Reset" />
+                    <link-button :links="`/school/delete/${records[0].school_id}`" text="Deleted School"/>
                     <form-button is-submit="submit" text="Update" :enabled="processing"/>
                 </template>
             </form-container>
@@ -61,6 +62,7 @@ import FormHeader from "@/Shared/Form/FormHeader";
 import FormInput from "@/Shared/Form/Input";
 import LabelForm from "@/Shared/Form/Label";
 import FormTextArea from "@/Shared/Form/InputTextArea";
+import LinkButton from '@/Shared/Form/LinkButton'
 import { VueTelInput } from "vue-tel-input";
 import "vue-tel-input/dist/vue-tel-input.css";
 import {useForm} from "@inertiajs/inertia-vue3";

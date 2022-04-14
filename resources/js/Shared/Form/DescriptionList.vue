@@ -25,14 +25,19 @@
               <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                   <dt class="text-sm font-medium text-gray-500">Social Media</dt>
                   <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      <social-list :stacks="item.social" />
+                          <social-list :stacks="item.social" />
+                          <span v-show="item.social === null ? false : true">None</span>
                   </dd>
               </div>
               <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                   <dt class="text-sm font-medium text-gray-500">Time</dt>
                   <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      <schedule :items="item.schedules" />
-                      
+                      <div v-if="item.schedules">
+                          <schedule :items="item.schedules" />
+                      </div>
+                      <div v-else>
+                          Create Schedules
+                      </div>
                   </dd>
               </div>
               <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">

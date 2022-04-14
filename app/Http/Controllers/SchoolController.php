@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\School;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
 
@@ -92,9 +95,9 @@ class SchoolController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @return Application|RedirectResponse|Redirector
      */
-    public function update(Request $request, $token): \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+    public function update(Request $request, $token): Application|RedirectResponse|Redirector
     {
         $this->validate($request, [
             'school_name' => 'required',
@@ -119,11 +122,11 @@ class SchoolController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return Response
+     * @return Application|RedirectResponse|Response|Redirector
      */
     public function destroy($id)
     {
-        //
-        return dd($id);
+        School::where('school_id', $id)->delete();
+        return redirect('/school')->with('success', 'successfully deleted School');
     }
 }

@@ -1,10 +1,5 @@
 <template>
-    <teleport to="body">
-        <form-modal :open="$page.props.modal.dialog" @close="$page.props.modal.dialog = false"/>
-    </teleport>
     <admin-layout title="School" isActive="school">
-        <template #header>
-        </template>
         <div>
             <header-banner v-show="$page.props.flash.success != null" :message="$page.props.flash.success"/>
         </div>
@@ -27,10 +22,9 @@
                     <link-button :links="linkEdit(record.id)" text="Update"/>
                 </template>
             </form-description>
-            <button @click="$page.props.modal.dialog = true">
-                <PencilIcon> </PencilIcon>
-                Edit Schedule</button>
-            <button @click="$page.props.modal.dialog = true">Edit Schedule</button>
+            <div class="pt-4">
+                <custom-button text="Edit Schedules" :url="`schedules/${records[0].id}/edit`"/>
+            </div>
         </div>
         <div v-else>
             <landing-section
@@ -45,7 +39,7 @@
     </admin-layout>
 </template>
 <script setup>
-import FormModal from "@/Shared/Modal/ModalForms"
+import CustomButton from '@/Shared/CustomButtons/CustomButton'
 import AdminLayout from "@/Layouts/AdminLayout"
 import LoadingComponents from "../../LoadingComponents";
 import LinkButton from "@/Shared/Form/LinkButton";
@@ -54,9 +48,7 @@ import Banner from "@/Shared/Stats/Banner";
 import LandingSection from "@/Shared/Sections/CTA/LandingSection"
 import FaqSection from "@/Shared/Sections/CTA/FaqSection"
 import HeaderBanner from "@/Shared/Banner/HeaderBanner"
-import {defineAsyncComponent, ref} from "vue";
-import { PencilIcon } from "@heroicons/vue/outline"
-
+import {defineAsyncComponent} from "vue";
 const FormDescription = defineAsyncComponent({
     loader:() => import("@/Shared/Form/DescriptionList"),
     loadingComponent: LoadingComponents,
@@ -64,14 +56,12 @@ const FormDescription = defineAsyncComponent({
     errorComponent: 'somethings wrong...',
     timeout: 3000
 })
-
 const props = defineProps({
     records: Object,
 })
 const linkEdit = (link) => {
     return `/school/${link}/edit`
 }
-
 const faqs = [
     {
         question: 'How do you make holy water?',
