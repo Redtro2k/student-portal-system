@@ -3,7 +3,9 @@
         <template #header>
             <h1 class="text-2xl font-sans font-semibold text-gray-900">Subjects</h1>
         </template>
-        <list-portraits :items="subjects"/>
+       <template #content>
+           <list-portraits :items="subjects"/>
+       </template>
     </admin-layout>
 </template>
 <script setup>

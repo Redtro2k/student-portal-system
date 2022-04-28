@@ -13023,7 +13023,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             return wordKey[2];
         },
         translate: function (number, withoutSuffix, key, isFuture) {
-            var wordKey = translator.words[key];
+            var wordKey = translator.words[key],
+                word;
 
             if (key.length === 1) {
                 // Nominativ
@@ -13031,7 +13032,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                 return isFuture || withoutSuffix ? wordKey[0] : wordKey[1];
             }
 
-            const word = translator.correctGrammaticalCase(number, wordKey);
+            word = translator.correctGrammaticalCase(number, wordKey);
             // Nominativ
             if (key === 'yy' && withoutSuffix && word === 'годину') {
                 return number + ' година';
@@ -13168,7 +13169,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             return wordKey[2];
         },
         translate: function (number, withoutSuffix, key, isFuture) {
-            var wordKey = translator.words[key];
+            var wordKey = translator.words[key],
+                word;
 
             if (key.length === 1) {
                 // Nominativ
@@ -13176,7 +13178,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                 return isFuture || withoutSuffix ? wordKey[0] : wordKey[1];
             }
 
-            const word = translator.correctGrammaticalCase(number, wordKey);
+            word = translator.correctGrammaticalCase(number, wordKey);
             // Nominativ
             if (key === 'yy' && withoutSuffix && word === 'godinu') {
                 return number + ' godina';
@@ -16435,7 +16437,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 //! moment.js
-//! version : 2.29.2
+//! version : 2.29.3
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
@@ -22070,7 +22072,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     //! moment.js
 
-    hooks.version = '2.29.2';
+    hooks.version = '2.29.3';
 
     setHookCallback(createLocal);
 
@@ -22135,13 +22137,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Badge_vue_vue_type_template_id_1555c477__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Badge.vue?vue&type=template&id=1555c477 */ "./resources/js/Shared/Badge.vue?vue&type=template&id=1555c477");
 /* harmony import */ var _Badge_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Badge.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/Badge.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Badge_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Badge_vue_vue_type_template_id_1555c477__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Badge.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Badge_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Badge_vue_vue_type_template_id_1555c477__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Badge.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -22163,13 +22165,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _DescriptionList_vue_vue_type_template_id_073e472b__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DescriptionList.vue?vue&type=template&id=073e472b */ "./resources/js/Shared/Form/DescriptionList.vue?vue&type=template&id=073e472b");
 /* harmony import */ var _DescriptionList_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DescriptionList.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/Form/DescriptionList.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_DescriptionList_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_DescriptionList_vue_vue_type_template_id_073e472b__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/DescriptionList.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_DescriptionList_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_DescriptionList_vue_vue_type_template_id_073e472b__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/DescriptionList.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -22191,13 +22193,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Schedule_vue_vue_type_template_id_07e6eb5c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Schedule.vue?vue&type=template&id=07e6eb5c */ "./resources/js/Shared/List/Schedule.vue?vue&type=template&id=07e6eb5c");
 /* harmony import */ var _Schedule_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Schedule.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/List/Schedule.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Schedule_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Schedule_vue_vue_type_template_id_07e6eb5c__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/List/Schedule.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Schedule_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Schedule_vue_vue_type_template_id_07e6eb5c__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/List/Schedule.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -22219,13 +22221,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _SocialMediaList_vue_vue_type_template_id_7f594f80__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SocialMediaList.vue?vue&type=template&id=7f594f80 */ "./resources/js/Shared/List/SocialMediaList.vue?vue&type=template&id=7f594f80");
 /* harmony import */ var _SocialMediaList_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SocialMediaList.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/List/SocialMediaList.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_SocialMediaList_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_SocialMediaList_vue_vue_type_template_id_7f594f80__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/List/SocialMediaList.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_SocialMediaList_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_SocialMediaList_vue_vue_type_template_id_7f594f80__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/List/SocialMediaList.vue"]])
 /* hot reload */
 if (false) {}
 

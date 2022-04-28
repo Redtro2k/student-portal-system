@@ -3,7 +3,9 @@
         <template #header>
             <h1 class="text-2xl font-sans font-semibold text-gray-900">Teachers</h1>
         </template>
-        <list-data :Records="peoples"/>
+        <template #content>
+            <list-data :Records="peoples"/>
+        </template>
     </admin-layout>
 </template>
 <script setup>

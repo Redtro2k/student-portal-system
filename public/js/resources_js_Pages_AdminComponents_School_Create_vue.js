@@ -225,6 +225,12 @@ __webpack_require__.r(__webpack_exports__);
       icon: _heroicons_vue_outline_index__WEBPACK_IMPORTED_MODULE_9__,
       current: props.isActive === 'school'
     }, {
+      id: 6,
+      name: 'Users',
+      href: '/users',
+      icon: _heroicons_vue_outline_index__WEBPACK_IMPORTED_MODULE_7__,
+      current: props.isActive === 'users'
+    }, {
       id: 7,
       name: 'More',
       href: '#',
@@ -1067,7 +1073,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["show"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Static sidebar for desktop "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar component, swap this element with another sidebar if you like "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <img class=\"h-8 w-auto\" src=\"https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg\" alt=\"Workflow\" />"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["ApplicationLogo"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["ResponsiveNavbar"], {
+  , ["show"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Static sidebar for desktop "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar component, swap this element with another sidebar if you like "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["ApplicationLogo"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["ResponsiveNavbar"], {
     navigation: $setup.navigation
   })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [_ctx.$page.props.jetstream.managesProfilePhotos ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     "class": "inline-block h-9 w-9 rounded-full",
@@ -1096,7 +1102,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["MenuIcon"], {
     "class": "h-6 w-6",
     "aria-hidden": "true"
-  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [_ctx.$slots.header ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("header", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "header")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Replace with your content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /End replace ")])])])])]);
+  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [_ctx.$slots.header ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("header", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "header")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Replace with your content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "content"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /End replace ")])])])])]);
 }
 
 /***/ }),
@@ -1859,12 +1865,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _ApplicationLogo_vue_vue_type_template_id_4e07f5d2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ApplicationLogo.vue?vue&type=template&id=4e07f5d2 */ "./resources/js/Jetstream/ApplicationLogo.vue?vue&type=template&id=4e07f5d2");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 const script = {}
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_ApplicationLogo_vue_vue_type_template_id_4e07f5d2__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Jetstream/ApplicationLogo.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_ApplicationLogo_vue_vue_type_template_id_4e07f5d2__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Jetstream/ApplicationLogo.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -1886,13 +1892,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _AdminLayout_vue_vue_type_template_id_5c4e0205__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AdminLayout.vue?vue&type=template&id=5c4e0205 */ "./resources/js/Layouts/AdminLayout.vue?vue&type=template&id=5c4e0205");
 /* harmony import */ var _AdminLayout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AdminLayout.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Layouts/AdminLayout.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AdminLayout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AdminLayout_vue_vue_type_template_id_5c4e0205__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Layouts/AdminLayout.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AdminLayout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AdminLayout_vue_vue_type_template_id_5c4e0205__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Layouts/AdminLayout.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -1914,13 +1920,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Create_vue_vue_type_template_id_60daa058__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Create.vue?vue&type=template&id=60daa058 */ "./resources/js/Pages/AdminComponents/School/Create.vue?vue&type=template&id=60daa058");
 /* harmony import */ var _Create_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Create.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Pages/AdminComponents/School/Create.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Create_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Create_vue_vue_type_template_id_60daa058__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/AdminComponents/School/Create.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Create_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Create_vue_vue_type_template_id_60daa058__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/AdminComponents/School/Create.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -1942,13 +1948,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ResponsiveNavbar_vue_vue_type_template_id_d4c64d54__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ResponsiveNavbar.vue?vue&type=template&id=d4c64d54 */ "./resources/js/Shared/AdminLayout/ResponsiveNavbar.vue?vue&type=template&id=d4c64d54");
 /* harmony import */ var _ResponsiveNavbar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ResponsiveNavbar.vue?vue&type=script&lang=js */ "./resources/js/Shared/AdminLayout/ResponsiveNavbar.vue?vue&type=script&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ResponsiveNavbar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ResponsiveNavbar_vue_vue_type_template_id_d4c64d54__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/AdminLayout/ResponsiveNavbar.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ResponsiveNavbar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ResponsiveNavbar_vue_vue_type_template_id_d4c64d54__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/AdminLayout/ResponsiveNavbar.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -1970,13 +1976,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Badge_vue_vue_type_template_id_1555c477__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Badge.vue?vue&type=template&id=1555c477 */ "./resources/js/Shared/Badge.vue?vue&type=template&id=1555c477");
 /* harmony import */ var _Badge_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Badge.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/Badge.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Badge_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Badge_vue_vue_type_template_id_1555c477__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Badge.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Badge_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Badge_vue_vue_type_template_id_1555c477__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Badge.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -1998,13 +2004,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Button_vue_vue_type_template_id_6740f1d1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button.vue?vue&type=template&id=6740f1d1 */ "./resources/js/Shared/Form/Button.vue?vue&type=template&id=6740f1d1");
 /* harmony import */ var _Button_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Button.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/Form/Button.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Button_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Button_vue_vue_type_template_id_6740f1d1__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/Button.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Button_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Button_vue_vue_type_template_id_6740f1d1__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/Button.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -2026,13 +2032,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _FormHeader_vue_vue_type_template_id_57367010__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormHeader.vue?vue&type=template&id=57367010 */ "./resources/js/Shared/Form/FormHeader.vue?vue&type=template&id=57367010");
 /* harmony import */ var _FormHeader_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormHeader.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/Form/FormHeader.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_FormHeader_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_FormHeader_vue_vue_type_template_id_57367010__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/FormHeader.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_FormHeader_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_FormHeader_vue_vue_type_template_id_57367010__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/FormHeader.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -2054,13 +2060,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Input_vue_vue_type_template_id_ab3b510a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Input.vue?vue&type=template&id=ab3b510a */ "./resources/js/Shared/Form/Input.vue?vue&type=template&id=ab3b510a");
 /* harmony import */ var _Input_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Input.vue?vue&type=script&lang=js */ "./resources/js/Shared/Form/Input.vue?vue&type=script&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Input_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Input_vue_vue_type_template_id_ab3b510a__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/Input.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Input_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Input_vue_vue_type_template_id_ab3b510a__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/Input.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -2082,13 +2088,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _InputTextArea_vue_vue_type_template_id_158406f5__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InputTextArea.vue?vue&type=template&id=158406f5 */ "./resources/js/Shared/Form/InputTextArea.vue?vue&type=template&id=158406f5");
 /* harmony import */ var _InputTextArea_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./InputTextArea.vue?vue&type=script&lang=js */ "./resources/js/Shared/Form/InputTextArea.vue?vue&type=script&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_InputTextArea_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_InputTextArea_vue_vue_type_template_id_158406f5__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/InputTextArea.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_InputTextArea_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_InputTextArea_vue_vue_type_template_id_158406f5__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/InputTextArea.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -2110,13 +2116,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Label_vue_vue_type_template_id_206ad9a5__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Label.vue?vue&type=template&id=206ad9a5 */ "./resources/js/Shared/Form/Label.vue?vue&type=template&id=206ad9a5");
 /* harmony import */ var _Label_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Label.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/Form/Label.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Label_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Label_vue_vue_type_template_id_206ad9a5__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/Label.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Label_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Label_vue_vue_type_template_id_206ad9a5__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/Label.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -2138,13 +2144,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ToggleWithDescription_vue_vue_type_template_id_7277ef13__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ToggleWithDescription.vue?vue&type=template&id=7277ef13 */ "./resources/js/Shared/Form/ToggleWithDescription.vue?vue&type=template&id=7277ef13");
 /* harmony import */ var _ToggleWithDescription_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ToggleWithDescription.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/Form/ToggleWithDescription.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_laravel_student_portal_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ToggleWithDescription_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ToggleWithDescription_vue_vue_type_template_id_7277ef13__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/ToggleWithDescription.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_Users_Darwin_Desktop_Laravel_student_portal_system_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ToggleWithDescription_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ToggleWithDescription_vue_vue_type_template_id_7277ef13__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Form/ToggleWithDescription.vue"]])
 /* hot reload */
 if (false) {}
 

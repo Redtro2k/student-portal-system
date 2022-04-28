@@ -30,7 +30,7 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        auth()->user()->assignRole('admin');
+//        auth()->user()->assignRole('admin');
         return Inertia::render('Dashboard');
     })->name('dashboard');
     Route::middleware(['role:admin'])->group(function(){
@@ -47,7 +47,13 @@ Route::middleware([
             });
             Route::controller(App\Http\Controllers\Shared\ScheduleController::class)->group(function(){
                 Route::get('schedules/{id}/edit', 'edit');
+                Route::post('schedules/update/{id}', 'update');
             });
         Route::resource('subject', \App\Http\Controllers\SubjectController::class);
+        Route::controller(\App\Http\Controllers\UsersController::class)->group(function() {
+             Route::get('/users', 'index');
+             Route::get('/users/{id}', 'edit');
+        });
     });
+
 });

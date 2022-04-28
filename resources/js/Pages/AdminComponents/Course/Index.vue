@@ -8,7 +8,7 @@
                 <template #header>
                     <form-header  title="Add Course" sub-title="add a course to our School..."/>
                 </template>
-                <template #main>
+                <template #container>
                         <div class="grid grid-cols-6 gap-6">
                             <input-form label-title="Course Name" v-model:title="form.course_name"/>
                             <input-form label-title="Course Semester" v-model:title="form.semester" small-description="Insert a range of semester for Ex. 4 means 1st - 4th grading/sem"/>

@@ -52,7 +52,6 @@
                 <div class="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white">
                     <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
                         <div class="flex items-center flex-shrink-0 px-4">
-                            <!--                            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg" alt="Workflow" />-->
                             <ApplicationLogo/>
                         </div>
                         <ResponsiveNavbar :navigation="navigation"/>
@@ -89,7 +88,7 @@
                     </div>
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
                         <!-- Replace with your content -->
-                        <slot></slot>
+                        <slot name="content"></slot>
                         <!-- /End replace -->
                     </div>
                 </div>
@@ -126,6 +125,7 @@ const navigation = [
     { id:4, name: 'Teachers', href: '/teachers', icon: UserIcon, current: props.isActive === 'teachers'},
     { id:5, name: 'Subjects', href: '/subject', icon: BookOpenIcon, current: props.isActive === 'subject'},
     { id:6, name: 'School', href: '/school', icon: OfficeBuildingIcon, current: props.isActive === 'school'},
+    { id:6, name: 'Users', href: '/users', icon: UserIcon, current: props.isActive === 'users'},
     { id:7, name: 'More', href: '#', icon: CogIcon, current: props.isActive === 'more'}
 ]
     const sidebarOpen = ref(false)

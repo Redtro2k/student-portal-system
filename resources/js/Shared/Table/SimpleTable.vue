@@ -22,16 +22,13 @@
                     </table>
                 </div>
             </div>
-            <div class="sm:px-6 lg:px-8">
-                <paginate />
-            </div>
+
 
         </div>
     </div>
 </template>
 <script setup>
-import Paginate from '@/Shared/Paginate'
-    defineProps({
+defineProps({
         title: {
             type: String,
             required: true

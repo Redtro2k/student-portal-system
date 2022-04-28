@@ -5,54 +5,56 @@
                 New School
             </h1>
         </template>
-        <form @submit.prevent="submit">
-            <form-container>
-                <template #header>
-                    <form-header
-                        title="School Information"
-                        sub-title="Established a School Information be Sure that all of the information is formal and legit, It will display on our Web Application."
-                    />
-                </template>
-                <template #main>
-                    <form-input
-                        v-model:title="form.school_name"
-                        label-title="Create a School Name"
-                        small-description="please create a school name and be sure its good or interactive and formalize name"
-                        :error="$page.props.errors.schoo_name"
-                    />
-                    <form-input
-                        v-model:title="form.location"
-                        label-title="Location"
-                        description="Manila, Quezon City"
-                        small-description="please fill up the specific location, Sorry for manual fill up we're still developing maps API"
-                        :error="$page.props.errors.location"
-                    />
-                    <form-input
-                        v-model:title="form.address"
-                        label-title="Street Address"
-                        description="Gen. Villamor St. "
-                        small-description="please fill up the specific Address or live with a full adress, Sorry for manual fill up we're still developing maps API"
-                        :error="$page.props.errors.address"
-                    />
-                    <div class="col-span-6 px-2 sm:col-span-3">
-                        <label-form title="Phone Number" />
-                        <vue-tel-input v-model="form.telephone"></vue-tel-input>
-                        <p class="text-red-400 text-sm pb-2" v-if="$page.props.errors.telephone">{{$page.props.errors.telephone}}</p>
-                    </div>
-                    <form-text-area
-                        size="4"
-                        name="About/Brief School"
-                        v-model:title="form.about"
-                        :error="$page.props.errors.about"
-                    />
+        <template #content>
+            <form @submit.prevent="submit">
+                <form-container>
+                    <template #header>
+                        <form-header
+                            title="School Information"
+                            sub-title="Established a School Information be Sure that all of the information is formal and legit, It will display on our Web Application."
+                        />
+                    </template>
+                    <template #main>
+                        <form-input
+                            v-model:title="form.school_name"
+                            label-title="Create a School Name"
+                            small-description="please create a school name and be sure its good or interactive and formalize name"
+                            :error="$page.props.errors.schoo_name"
+                        />
+                        <form-input
+                            v-model:title="form.location"
+                            label-title="Location"
+                            description="Manila, Quezon City"
+                            small-description="please fill up the specific location, Sorry for manual fill up we're still developing maps API"
+                            :error="$page.props.errors.location"
+                        />
+                        <form-input
+                            v-model:title="form.address"
+                            label-title="Street Address"
+                            description="Gen. Villamor St. "
+                            small-description="please fill up the specific Address or live with a full adress, Sorry for manual fill up we're still developing maps API"
+                            :error="$page.props.errors.address"
+                        />
+                        <div class="col-span-6 px-2 sm:col-span-3">
+                            <label-form title="Phone Number" />
+                            <vue-tel-input v-model="form.telephone"></vue-tel-input>
+                            <p class="text-red-400 text-sm pb-2" v-if="$page.props.errors.telephone">{{$page.props.errors.telephone}}</p>
+                        </div>
+                        <form-text-area
+                            size="4"
+                            name="About/Brief School"
+                            v-model:title="form.about"
+                            :error="$page.props.errors.about"
+                        />
 
-                </template>
-                <template #footer>
-                    <link-button :links="`/school/delete/${records[0].school_id}`" text="Deleted School"/>
-                    <form-button is-submit="submit" text="Update" :enabled="processing"/>
-                </template>
-            </form-container>
-        </form>
+                    </template>
+                    <template #footer>
+                        <link-button :links="`/school/delete/${records[0].school_id}`" text="Deleted School"/>
+                        <form-button is-submit="submit" text="Update" :enabled="processing"/>
+                    </template>
+                </form-container>
+            </form>
+        </template>
     </admin-layout>
 </template>
 <script setup>

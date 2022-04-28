@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Shared;
 
 use App\Http\Controllers\Controller;
+use App\Models\School;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -59,7 +60,15 @@ class ScheduleController extends Controller
     public function edit($id)
     {
         //
-        return Inertia::render('AdminComponents/School/SchedulePage');
+        $school = School::all()->where('school_id', $id);
+        return Inertia::render('AdminComponents/School/SchedulePage', [
+            'schedules' => $school->map(fn($schedules) => [
+                'schedule' => $schedules->schedules,
+            ]),
+            'schoolToken' => $school->map(fn($token) => [
+                'school_id' => $token->school_id
+            ])
+        ]);
     }
 
     /**
@@ -72,6 +81,16 @@ class ScheduleController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        $this->validate($request ,[
+            'schedules' => 'required'
+        ]);
+        School::updateOrCreate([
+            'school_id' => $id
+        ],[
+            'schedules' => $request->schedules
+        ]);
+            return redirect('/school')->with('success', 'Successfully Update');
     }
 
     /**

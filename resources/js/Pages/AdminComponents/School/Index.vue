@@ -1,41 +1,45 @@
 <template>
     <admin-layout title="School" isActive="school">
-        <div>
-            <header-banner v-show="$page.props.flash.success != null" :message="$page.props.flash.success"/>
-        </div>
-        <div v-if="records.length">
-            <banner>
-                <template #header>
-                    Last in 30 days
-                </template>
-                <template #main>
-                    <stats-banner title="Total Salary" value="0" previous-stat="0" change="1"/>
-                    <stats-banner title="School Branches" value="1" previous-stat="0" change="100"/>
-                    <stats-banner title="Stuff Manager" value="54" previous-stat="53" change="5" />
-                </template>
-            </banner>
-            <form-description
-                title="School Information"
-                sub-title="School details and application."
-                :items="records" class="mt-4">
-                <template v-for="record in records" :key="record" #footer>
-                    <link-button :links="linkEdit(record.id)" text="Update"/>
-                </template>
-            </form-description>
-            <div class="pt-4">
-                <custom-button text="Edit Schedules" :url="`schedules/${records[0].id}/edit`"/>
+        <template #header>
+            <div>
+                <header-banner v-show="$page.props.flash.success != null" :message="$page.props.flash.success"/>
             </div>
-        </div>
-        <div v-else>
-            <landing-section
-                images="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                title="Create A Professional School"
-                paragraph="My name is Professor Heltor Patrius, submarine biologist and the foremost authority on deep-sea excavation. Six months ago, I developed a blueprint for what could potentially be the next generation of submarines. Capable of plunging to depths of approximately twenty-one hundred feet in six seconds, without disturbing the equilibrium of anybody aboard, this was to be the future of underwater transportation. I called her Trident. "
-                link="school/create"
-                name-link="Create School"
-            />
-            <faq-section :items="faqs"/>
-        </div>
+        </template>
+        <template #content>
+            <div v-if="records.length">
+                <banner>
+                    <template #header>
+                        Last in 30 days
+                    </template>
+                    <template #main>
+                        <stats-banner title="Total Salary" value="0" previous-stat="0" change="1"/>
+                        <stats-banner title="School Branches" value="1" previous-stat="0" change="100"/>
+                        <stats-banner title="Stuff Manager" value="54" previous-stat="53" change="5" />
+                    </template>
+                </banner>
+                <form-description
+                    title="School Information"
+                    sub-title="School details and application."
+                    :items="records" class="mt-4">
+                    <template v-for="record in records" :key="record" #footer>
+                        <link-button :links="linkEdit(record.id)" text="Update"/>
+                    </template>
+                </form-description>
+                <div class="pt-4">
+                    <custom-button text="Edit Schedules" :url="`schedules/${records[0].id}/edit`"/>
+                </div>
+            </div>
+            <div v-else>
+                <landing-section
+                    images="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    title="Create A Professional School"
+                    paragraph="My name is Professor Heltor Patrius, submarine biologist and the foremost authority on deep-sea excavation. Six months ago, I developed a blueprint for what could potentially be the next generation of submarines. Capable of plunging to depths of approximately twenty-one hundred feet in six seconds, without disturbing the equilibrium of anybody aboard, this was to be the future of underwater transportation. I called her Trident. "
+                    link="school/create"
+                    name-link="Create School"
+                />
+                <faq-section :items="faqs"/>
+            </div>
+        </template>
     </admin-layout>
 </template>
 <script setup>

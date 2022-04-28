@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\School;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Middleware;
@@ -50,6 +51,11 @@ class HandleInertiaRequests extends Middleware
             'modal' => function () use ($request){
                 return [
                     'dialog' => false
+                ];
+            },
+            'admin' => function () use($request){
+                return [
+                    'school' => (bool)School::all()  === null
                 ];
             }
         ));
