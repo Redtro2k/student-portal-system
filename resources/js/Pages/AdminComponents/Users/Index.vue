@@ -17,7 +17,7 @@
                         <table-row :title="user.name === $page.props.user.name ? `${user.name} (You)` : `${user.name}`"/>
                         <table-row v-show="!!`${user.role}`" is-badge :title="`${user.role}`" />
                         <table-row v-show="!`${user.role}`" title="Empty"/>
-                        <table-row is-link :a-href="`users/${user.id}`" title="View" />
+                        <table-row is-link :link="`users/show/${user.id}`" title="View" />
                     </tr>
                 </template>
             </simple-table>

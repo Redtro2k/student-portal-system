@@ -4,7 +4,7 @@
             <badge :title="title" />
         </span>
         <span v-else-if="isLink">
-            <a :href="aHref" class="text-indigo-600 hover:text-indigo-900">{{title}}</a>
+            <Link :href="link" class="text-indigo-600 hover:text-indigo-900">{{title}}</link>
         </span>
         <span v-else>
             {{title}}
@@ -13,6 +13,7 @@
 </template>
 <script setup>
 import Badge from '@/Shared/Badge'
+import {Link} from '@inertiajs/inertia-vue3'
 defineProps({
     title: String,
     isPrimary: {
@@ -27,7 +28,7 @@ defineProps({
         type: Boolean,
         default: () => false
     },
-    aHref: {
+    link: {
         type: String,
         default: () => null
     }

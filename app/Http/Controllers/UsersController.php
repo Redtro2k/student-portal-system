@@ -55,11 +55,23 @@ class UsersController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return Response
+     * @return \Inertia\Response
      */
     public function show($id)
     {
         //
+        return Inertia::render('AdminComponents/Users/Show', [
+            'users' => User::all()->where('id', $id)->map(fn($user) => [
+                'user_name' => $user->name,
+                'email_verified' => $user->email_verified_at,
+                'registered_on' => $user->created_at,
+                'verified_on' => $user->updated_at,
+                'user_email' => $user->email,
+                'user_profile_photo' => $user->profile_photo_url,
+                'user_created' => $user->created_at,
+                'user_roles' => $user->roles() != null ? $user->roles()->pluck('name') : null
+            ])
+        ]);
     }
 
     /**
@@ -71,16 +83,7 @@ class UsersController extends Controller
     public function edit($id)
     {
         //
-        return Inertia::render('AdminComponents/Users/Edit', [
-            'users' => User::all()->where('id', $id)->map(fn($user) => [
-                'user_name' => $user->name,
-                'registered_on' => $user->created_at,
-                'verified_on' => $user->updated_at,
-                'user_email' => $user->email,
-                'user_profile_photo' => $user->profile_photo_url,
-                'user_roles' => $user->roles() != null ? $user->roles()->pluck('name') : null
-            ])
-        ]);
+
     }
 
     /**

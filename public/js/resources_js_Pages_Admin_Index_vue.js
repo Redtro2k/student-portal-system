@@ -486,6 +486,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Shared_Badge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Shared/Badge */ "./resources/js/Shared/Badge.vue");
+/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -508,7 +510,7 @@ __webpack_require__.r(__webpack_exports__);
         return false;
       }
     },
-    aHref: {
+    link: {
       type: String,
       "default": function _default() {
         return null;
@@ -519,7 +521,8 @@ __webpack_require__.r(__webpack_exports__);
     var expose = _ref.expose;
     expose();
     var __returned__ = {
-      Badge: _Shared_Badge__WEBPACK_IMPORTED_MODULE_0__["default"]
+      Badge: _Shared_Badge__WEBPACK_IMPORTED_MODULE_0__["default"],
+      Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Link
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -1285,8 +1288,7 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   key: 1
 };
-var _hoisted_3 = ["href"];
-var _hoisted_4 = {
+var _hoisted_3 = {
   key: 2
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -1296,12 +1298,21 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: $props.title
   }, null, 8
   /* PROPS */
-  , ["title"])])) : $props.isLink ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    href: $props.aHref,
+  , ["title"])])) : $props.isLink ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
+    href: $props.link,
     "class": "text-indigo-600 hover:text-indigo-900"
-  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.title), 9
-  /* TEXT, PROPS */
-  , _hoisted_3)])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.title), 1
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.title), 1
+      /* TEXT */
+      )];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 8
+  /* PROPS */
+  , ["href"])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.title), 1
   /* TEXT */
   ))], 2
   /* CLASS */

@@ -52,7 +52,7 @@ Route::middleware([
         Route::resource('subject', \App\Http\Controllers\SubjectController::class);
         Route::controller(\App\Http\Controllers\UsersController::class)->group(function() {
              Route::get('/users', 'index');
-             Route::get('/users/{id}', 'edit');
+             Route::get('/users/show/{id}', 'show');
         });
     });
 
